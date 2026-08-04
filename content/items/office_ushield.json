@@ -1,0 +1,13 @@
+{
+  "id": "office_ushield",
+  "name": "甩锅 U 盘",
+  "description": "装满了『别人的』文档的 U 盘。关键时刻插上，能把责任完美转移——包括灵异责任。",
+  "effect": "甩锅检定获得加成；可把一次失败归咎于『系统故障』或『幽灵同事』。",
+  "keywords": [
+    "U盘",
+    "甩锅",
+    "文档",
+    "责任"
+  ],
+  "world_id": "office_night_world"
+}

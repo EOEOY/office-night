@@ -1,0 +1,13 @@
+{
+  "id": "office_blanket",
+  "name": "加班毯",
+  "description": "公司发的灰色加班毯，盖着它能在工位睡两小时——前提是你能在闹鬼的办公室睡着。",
+  "effect": "短暂休息恢复体力；盖着时不会被『深夜巡查』发现。",
+  "keywords": [
+    "加班毯",
+    "睡觉",
+    "休息",
+    "巡查"
+  ],
+  "world_id": "office_night_world"
+}

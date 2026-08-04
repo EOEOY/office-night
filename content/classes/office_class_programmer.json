@@ -1,0 +1,9 @@
+{
+  "id": "office_class_programmer",
+  "name": "程序员",
+  "description": "代码能跑就行。深夜写代码时，偶尔会写出不属于自己的代码——但 bug 真的被修好了。",
+  "mechanics": "加班与摸鱼专精；可修复电子设备；深夜可与幽灵同事协作获得额外加成。",
+  "rules": [
+    "office_rule"
+  ]
+}

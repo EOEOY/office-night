@@ -1,0 +1,13 @@
+{
+  "id": "office_coffee",
+  "name": "特浓咖啡",
+  "description": "深夜茶水间的特浓咖啡，提神效果拔群，副作用是它会跟你聊天。",
+  "effect": "饮用后加班值减少、当夜体力恢复；咖啡可能透露一条楼里的情报。",
+  "keywords": [
+    "咖啡",
+    "茶水间",
+    "提神",
+    "情报"
+  ],
+  "world_id": "office_night_world"
+}

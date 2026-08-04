@@ -1,0 +1,13 @@
+{
+  "id": "office_latex",
+  "name": "隔壁卷王·Alex",
+  "description": "隔壁公司（也是新风科技的兄弟公司）的卷王，深夜永远在工位。他 KPI 常年第一，代价是他已经三个月没回过家。他跟你打招呼的方式是：『你也来加班？』",
+  "keywords": [
+    "Alex",
+    "卷王",
+    "加班",
+    "隔壁公司"
+  ],
+  "world_id": "office_night_world",
+  "tier": "background"
+}

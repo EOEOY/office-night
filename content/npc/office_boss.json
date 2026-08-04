@@ -1,0 +1,13 @@
+{
+  "id": "office_boss",
+  "name": "老板·王总",
+  "description": "新风科技 CEO，口头禅『我们是一家人』。深夜的老板办公室偶尔传出打字声，但敲门进去只有空椅子。",
+  "keywords": [
+    "王总",
+    "老板",
+    "办公室",
+    "一家人"
+  ],
+  "world_id": "office_night_world",
+  "tier": "core"
+}

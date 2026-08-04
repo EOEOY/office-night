@@ -1,0 +1,47 @@
+{
+  "id": "office_chenma",
+  "character_name": "陈码",
+  "race": "人族",
+  "class": "程序员",
+  "description": "后端工程师，工位贴着『代码能跑就行』。深夜加班时，他写的代码偶尔会在第二天变成别人的名字——但他解释那是 git 合并问题。",
+  "attributes": {
+    "hairline": 8,
+    "slack": 12,
+    "brain": 17,
+    "deflect": 10,
+    "bp": 14,
+    "social": 8
+  },
+  "skills": [
+    {
+      "name": "加班",
+      "value": 4
+    },
+    {
+      "name": "摸鱼",
+      "value": 4
+    },
+    {
+      "name": "甩锅",
+      "value": 2
+    }
+  ],
+  "background": "陈码在星辰项目组干了三个月，头发少了三成。他坚信楼里闹鬼是因为服务器机房温度太低——直到打印机吐出一张写着『陈码，明天下班前提交』的纸条，字迹是他自己的，但他没写过。",
+  "equipment": [
+    {
+      "name": "机械键盘"
+    },
+    {
+      "name": "降噪耳机"
+    },
+    {
+      "name": "特浓咖啡"
+    }
+  ],
+  "gold": 3000,
+  "overtime": 30,
+  "boss_trust": 40,
+  "kpi": 45,
+  "rule_id": "office_rule",
+  "world_id": "office_night_world"
+}

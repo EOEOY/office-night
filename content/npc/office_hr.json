@@ -1,0 +1,13 @@
+{
+  "id": "office_hr",
+  "name": "HR·甄姐",
+  "description": "人事总监，笑容职业，手里永远端着黑咖啡。工位抽屉里的裁员名单每天都会变，最近多了一个熟悉的名字。",
+  "keywords": [
+    "甄姐",
+    "HR",
+    "裁员",
+    "名单"
+  ],
+  "world_id": "office_night_world",
+  "tier": "core"
+}

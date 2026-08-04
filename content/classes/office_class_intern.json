@@ -1,0 +1,9 @@
+{
+  "id": "office_class_intern",
+  "name": "实习生",
+  "description": "还相信努力就有回报。加班值涨得最快，但运气也最好——幽灵们似乎对新人格外关照。",
+  "mechanics": "加班专精；KPI 增长更快；深夜更容易发现隐藏工位与隐藏文档。",
+  "rules": [
+    "office_rule"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "id": "office_report",
+  "name": "汇报美化",
+  "description": "把 30% 的进度说成 90%，把事故说成机遇。职场必修课，深夜版能让 PPT 自己翻页。",
+  "mechanics": "汇报检定成功，提升老板信任或 KPI；深夜使用可安抚『办公室的低语』。",
+  "rules": [
+    "office_rule"
+  ]
+}

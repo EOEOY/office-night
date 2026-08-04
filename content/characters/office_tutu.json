@@ -1,0 +1,47 @@
+{
+  "id": "office_tutu",
+  "character_name": "图图",
+  "race": "人族",
+  "class": "产品经理",
+  "description": "产品经理，口头禅『这个需求很简单』。深夜她会对着空气演示 PPT，据说是在给看不见的客户汇报。",
+  "attributes": {
+    "hairline": 12,
+    "slack": 14,
+    "brain": 13,
+    "deflect": 15,
+    "bp": 11,
+    "social": 16
+  },
+  "skills": [
+    {
+      "name": "汇报",
+      "value": 5
+    },
+    {
+      "name": "拍马屁",
+      "value": 3
+    },
+    {
+      "name": "开会",
+      "value": 3
+    }
+  ],
+  "background": "图图的产品文档在深夜会自动更新——多出一些她从没写过的需求，比如『支持与幽灵协作』。她决定不告诉任何人，因为她发现那个幽灵改的需求，客户居然真的满意。",
+  "equipment": [
+    {
+      "name": "PPT 模板 U盘"
+    },
+    {
+      "name": "需求文档"
+    },
+    {
+      "name": "保温杯"
+    }
+  ],
+  "gold": 3500,
+  "overtime": 25,
+  "boss_trust": 55,
+  "kpi": 60,
+  "rule_id": "office_rule",
+  "world_id": "office_night_world"
+}

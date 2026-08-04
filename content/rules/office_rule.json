@@ -1,0 +1,103 @@
+{
+  "rule_id": "office_rule",
+  "rule_name": "深夜办公守则",
+  "description": "喜剧向职场规则：六维属性（发际线/摸鱼力/智商/甩锅/血压/社牛）、加班值、老板信任与 KPI。深夜写字楼里，活着下班就是胜利；KPI 达标就是传说。",
+  "dice_system": "d20",
+  "combat_model": "hp_based",
+  "mechanics": "d20 + 属性修正 + 技能加值 vs DC。20 大成功、1 大失败。加班值（overtime）满 100 触发『猝死』——不是玩笑，是规则。老板信任高可解锁资源与免死金牌；KPI 满 100 触发『转正』结局。深夜事件按楼层触发，电梯是最危险的地点。",
+  "attribute_points": 72,
+  "max_skills": 6,
+  "skill_point_total": 18,
+  "currency": "工资",
+  "hp_formula": "8 + bp * 2",
+  "attributes": [
+    {
+      "key": "hairline",
+      "name": "发际线",
+      "min": 3,
+      "max": 18
+    },
+    {
+      "key": "slack",
+      "name": "摸鱼力",
+      "min": 3,
+      "max": 18
+    },
+    {
+      "key": "brain",
+      "name": "智商",
+      "min": 3,
+      "max": 18
+    },
+    {
+      "key": "deflect",
+      "name": "甩锅",
+      "min": 3,
+      "max": 18
+    },
+    {
+      "key": "bp",
+      "name": "血压",
+      "min": 3,
+      "max": 18
+    },
+    {
+      "key": "social",
+      "name": "社牛",
+      "min": 3,
+      "max": 18
+    }
+  ],
+  "special_stats": [
+    {
+      "key": "overtime",
+      "name": "加班值",
+      "max": 100,
+      "description": "你在这栋楼里加的班。满 100 触发『猝死』——角色倒下，由同事接手（或第二天换新工位）。"
+    },
+    {
+      "key": "boss_trust",
+      "name": "老板信任",
+      "max": 100,
+      "description": "老板对你的信任度。高信任解锁资源、请假条与『免死金牌』；低信任会被叫去『聊一聊』。"
+    },
+    {
+      "key": "kpi",
+      "name": "KPI",
+      "max": 100,
+      "description": "你的业绩进度。满 100 触发『转正』结局——或触发老板的深夜述职会。"
+    }
+  ],
+  "skills": [
+    {
+      "key": "report",
+      "name": "汇报",
+      "value": 0
+    },
+    {
+      "key": "deflect_skill",
+      "name": "甩锅",
+      "value": 0
+    },
+    {
+      "key": "slack_skill",
+      "name": "摸鱼",
+      "value": 0
+    },
+    {
+      "key": "overtime_skill",
+      "name": "加班",
+      "value": 0
+    },
+    {
+      "key": "suckup",
+      "name": "拍马屁",
+      "value": 0
+    },
+    {
+      "key": "meeting",
+      "name": "开会",
+      "value": 0
+    }
+  ]
+}

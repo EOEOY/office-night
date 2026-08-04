@@ -1,0 +1,47 @@
+{
+  "id": "office_axin",
+  "character_name": "阿新",
+  "race": "人族",
+  "class": "实习生",
+  "description": "刚入职的实习生，还相信『努力就有回报』。他的工位在最角落，电脑屏幕在深夜会自己打开一个从没见过的文档——标题是《实习生转正指南（灵异版）》。",
+  "attributes": {
+    "hairline": 16,
+    "slack": 8,
+    "brain": 13,
+    "deflect": 8,
+    "bp": 15,
+    "social": 12
+  },
+  "skills": [
+    {
+      "name": "加班",
+      "value": 5
+    },
+    {
+      "name": "摸鱼",
+      "value": 2
+    },
+    {
+      "name": "汇报",
+      "value": 2
+    }
+  ],
+  "background": "阿新入职两周，已经加班到怀疑人生。但他发现一个秘密：深夜留在公司的人，KPI 会莫名上涨——代价是，办公室里偶尔会多出一个工位，工位上坐着的人，和他长得一模一样。",
+  "equipment": [
+    {
+      "name": "双肩包"
+    },
+    {
+      "name": "公司发的保温杯"
+    },
+    {
+      "name": "转正指南（灵异版）"
+    }
+  ],
+  "gold": 500,
+  "overtime": 40,
+  "boss_trust": 30,
+  "kpi": 35,
+  "rule_id": "office_rule",
+  "world_id": "office_night_world"
+}

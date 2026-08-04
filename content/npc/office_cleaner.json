@@ -1,0 +1,13 @@
+{
+  "id": "office_cleaner",
+  "name": "保洁·兰姨",
+  "description": "深夜保洁，知道这栋楼所有秘密。拖把经过的地方，闹鬼迹象会暂时消失。『楼里不干净的东西，都是加班加出来的。』",
+  "keywords": [
+    "兰姨",
+    "保洁",
+    "拖把",
+    "秘密"
+  ],
+  "world_id": "office_night_world",
+  "tier": "core"
+}

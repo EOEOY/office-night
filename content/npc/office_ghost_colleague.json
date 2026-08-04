@@ -1,0 +1,13 @@
+{
+  "id": "office_ghost_colleague",
+  "name": "幽灵同事",
+  "description": "深夜工位上多出来的同事。白天不存在，晚上会正常上班——帮你改 bug、替你开会、给你发『在吗』。你最好别问他去年年会抽到什么奖。",
+  "keywords": [
+    "幽灵",
+    "同事",
+    "工位",
+    "加班"
+  ],
+  "world_id": "office_night_world",
+  "tier": "background"
+}

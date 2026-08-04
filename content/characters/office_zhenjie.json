@@ -1,0 +1,47 @@
+{
+  "id": "office_zhenjie",
+  "character_name": "甄姐",
+  "race": "人族",
+  "class": "HR",
+  "description": "人事专员，笑容职业，眼里有 KPI。她相信所有灵异事件都能用『考勤记录』解释——直到她发现自己的工牌照片在深夜会换一张脸。",
+  "attributes": {
+    "hairline": 13,
+    "slack": 10,
+    "brain": 14,
+    "deflect": 14,
+    "bp": 12,
+    "social": 15
+  },
+  "skills": [
+    {
+      "name": "开会",
+      "value": 4
+    },
+    {
+      "name": "拍马屁",
+      "value": 4
+    },
+    {
+      "name": "甩锅",
+      "value": 3
+    }
+  ],
+  "background": "甄姐入职五年，经手过三次裁员。她工位抽屉里的名单每天都会变，她不敢扔——因为她试过，扔掉的名单第二天会出现在她包里。她最近在名单上看到了自己的名字，日期是明天。",
+  "equipment": [
+    {
+      "name": "裁员名单"
+    },
+    {
+      "name": "黑咖啡"
+    },
+    {
+      "name": "工牌"
+    }
+  ],
+  "gold": 4000,
+  "overtime": 20,
+  "boss_trust": 70,
+  "kpi": 75,
+  "rule_id": "office_rule",
+  "world_id": "office_night_world"
+}

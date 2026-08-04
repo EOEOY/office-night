@@ -1,0 +1,9 @@
+{
+  "id": "office_class_pm",
+  "name": "产品经理",
+  "description": "需求很简单。深夜演示 PPT 时，能看到别人看不见的客户——他们的需求是真实的。",
+  "mechanics": "汇报与开会专精；可协调多方合作；深夜可获得『幽灵客户』的额外需求情报。",
+  "rules": [
+    "office_rule"
+  ]
+}

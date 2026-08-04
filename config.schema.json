@@ -1,0 +1,15 @@
+{
+  "type": "object",
+  "properties": {
+    "enabled": {
+      "type": "boolean",
+      "title": "启用深夜办公室·打工人怪谈内容包",
+      "description": "启用后，本包的世界『深夜写字楼』与规则『深夜办公守则』会出现在创建游戏界面。",
+      "default": false,
+      "ui": {
+        "control": "switch",
+        "order": 10
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "office_security",
+  "name": "保安·老周",
+  "description": "夜班保安，守着监控室。他知道 13 层的存在，但从不说破：『电梯里的事，别在电梯里说。』",
+  "keywords": [
+    "老周",
+    "保安",
+    "监控",
+    "13层"
+  ],
+  "world_id": "office_night_world",
+  "tier": "core"
+}
