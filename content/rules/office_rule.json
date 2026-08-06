@@ -99,5 +99,68 @@
       "name": "开会",
       "value": 0
     }
-  ]
+  ],
+  "intents": {
+    "defaults": {
+      "applies_to_dice_systems": ["d20"],
+      "zh_match": "substring",
+      "en_match": "word",
+      "case_sensitive": false,
+      "prefer_longest": true
+    },
+    "report": {
+      "aliases": {
+        "zh-CN": ["汇报", "提交报告", "述职", "交差", "报进度", "交报告", "汇报工作"],
+        "en": ["report", "submit report", "debrief", "give status", "hand in report"]
+      },
+      "skill_candidates": {"zh-CN": ["汇报"], "en": ["report"]},
+      "default_attribute": "brain",
+      "priority": 10
+    },
+    "deflect": {
+      "aliases": {
+        "zh-CN": ["甩锅", "推卸责任", "推脱", "甩锅给", "推给别人", "抵赖", "甩责任"],
+        "en": ["deflect", "blame shift", "pass the buck", "scapegoat", "push blame"]
+      },
+      "skill_candidates": {"zh-CN": ["甩锅"], "en": ["deflect_skill"]},
+      "default_attribute": "deflect",
+      "priority": 10
+    },
+    "slack": {
+      "aliases": {
+        "zh-CN": ["摸鱼", "偷懒", "开小差", "划水", "摸会儿鱼", "溜号", "摸鱼时间"],
+        "en": ["slack", "procrastinate", "loaf", "dawdle", "slack off", "idle"]
+      },
+      "skill_candidates": {"zh-CN": ["摸鱼"], "en": ["slack_skill"]},
+      "default_attribute": "slack",
+      "priority": 10
+    },
+    "overtime": {
+      "aliases": {
+        "zh-CN": ["加班", "熬夜", "通宵", "赶工", "连夜赶", "加班干活", "留下来"],
+        "en": ["overtime", "work late", "burn the midnight oil", "stay late", "crunch"]
+      },
+      "skill_candidates": {"zh-CN": ["加班"], "en": ["overtime_skill"]},
+      "default_attribute": "bp",
+      "priority": 10
+    },
+    "suckup": {
+      "aliases": {
+        "zh-CN": ["拍马屁", "讨好老板", "阿谀奉承", "献殷勤", "溜须拍马", "恭维老板", "捧老板"],
+        "en": ["suck up", "flatter", "butter up", "kiss up", "fawn", "toady"]
+      },
+      "skill_candidates": {"zh-CN": ["拍马屁"], "en": ["suckup"]},
+      "default_attribute": "social",
+      "priority": 10
+    },
+    "meeting": {
+      "aliases": {
+        "zh-CN": ["开会", "组织会议", "参加例会", "主持会议", "开个会", "会议", "例会"],
+        "en": ["meeting", "have a meeting", "attend meeting", "conference", "standup"]
+      },
+      "skill_candidates": {"zh-CN": ["开会"], "en": ["meeting"]},
+      "default_attribute": "social",
+      "priority": 10
+    }
+  }
 }

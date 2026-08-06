@@ -1,0 +1,13 @@
+{
+  "id": "office_receptionist",
+  "name": "前台·小林",
+  "description": "深夜加班时唯一还在前台待着的女孩。她记得每层楼深夜的动静，却总说自己『什么都没看见』。别问她电梯为什么在没人按的时候自己下楼。",
+  "keywords": [
+    "小林",
+    "前台",
+    "电梯",
+    "深夜动静"
+  ],
+  "world_id": "office_night_world",
+  "tier": "core"
+}
