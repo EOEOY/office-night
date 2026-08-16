@@ -7,7 +7,10 @@
   "mechanics": "d20 + 属性修正 + 技能加值 vs DC。20 大成功、1 大失败。加班值（overtime）满 100 触发『猝死』——不是玩笑，是规则。老板信任高可解锁资源与免死金牌；KPI 满 100 触发『转正』结局。深夜事件按楼层触发，电梯是最危险的地点。",
   "attribute_points": 72,
   "max_skills": 6,
-  "skill_point_total": 18,
+  "skill_point_total": 200,
+  "max_skill_value": 80,
+  "skill_mode": "narrative",
+  "skill_value_to_bonus": {"20": 1, "40": 2, "60": 3, "80": 4},
   "currency": "工资",
   "hp_formula": "8 + bp * 2",
   "attributes": [
@@ -53,18 +56,21 @@
       "key": "overtime",
       "name": "加班值",
       "max": 100,
+      "initial": 0,
       "description": "你在这栋楼里加的班。满 100 触发『猝死』——角色倒下，由同事接手（或第二天换新工位）。"
     },
     {
       "key": "boss_trust",
       "name": "老板信任",
       "max": 100,
+      "initial": 50,
       "description": "老板对你的信任度。高信任解锁资源、请假条与『免死金牌』；低信任会被叫去『聊一聊』。"
     },
     {
       "key": "kpi",
       "name": "KPI",
       "max": 100,
+      "initial": 42,
       "description": "你的业绩进度。满 100 触发『转正』结局——或触发老板的深夜述职会。"
     }
   ],
