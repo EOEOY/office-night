@@ -2,7 +2,7 @@
   "schema_version": 1,
   "id": "office-night",
   "name": "深夜办公室·打工人怪谈",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "喜剧向职场怪谈内容包：加班到 23:00 的写字楼开始闹鬼，电梯停在第 13 层，茶水间的咖啡会说话。规则用发际线、摸鱼力、KPI 与老板信任撑起一套加班生存战。启用后创建游戏即可选择本世界与规则。",
   "plugin_type": "content-pack",
   "config_schema": "config.schema.json",
