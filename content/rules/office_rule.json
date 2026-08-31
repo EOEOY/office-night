@@ -1,16 +1,38 @@
 {
   "rule_id": "office_rule",
+  "rule_schema_version": 2,
+  "locale_schema_version": 1,
+  "default_locale": "zh-CN",
   "rule_name": "深夜办公守则",
   "description": "喜剧向职场规则：六维属性（发际线/摸鱼力/智商/甩锅/血压/社牛）、加班值、老板信任与 KPI。深夜写字楼里，活着下班就是胜利；KPI 达标就是传说。",
   "dice_system": "d20",
   "combat_model": "hp_based",
+  "check_mechanic": {
+    "dice": "d20",
+    "comparison": "roll_plus_modifier_gte_target",
+    "critical": {
+      "success": 20,
+      "failure": 1
+    },
+    "advantage": {
+      "type": "d20_keep_high_low",
+      "allow_explicit": true,
+      "assistance_grants": "advantage"
+    }
+  },
+  "max_check_dc": 20,
   "mechanics": "d20 + 属性修正 + 技能加值 vs DC。20 大成功、1 大失败。加班值（overtime）满 100 触发『猝死』——不是玩笑，是规则。老板信任高可解锁资源与免死金牌；KPI 满 100 触发『转正』结局。深夜事件按楼层触发，电梯是最危险的地点。",
   "attribute_points": 72,
   "max_skills": 6,
   "skill_point_total": 200,
   "max_skill_value": 80,
   "skill_mode": "narrative",
-  "skill_value_to_bonus": {"20": 1, "40": 2, "60": 3, "80": 4},
+  "skill_value_to_bonus": {
+    "20": 1,
+    "40": 2,
+    "60": 3,
+    "80": 4
+  },
   "currency": "工资",
   "hp_formula": "8 + bp * 2",
   "attributes": [
@@ -57,7 +79,12 @@
       "name": "加班值",
       "max": 100,
       "initial": 0,
-      "triggers": [{"at": 100, "notify": "加班值满 100：按规则触发『猝死』--角色倒下，由同事接手或换新工位"}],
+      "triggers": [
+        {
+          "at": 100,
+          "notify": "加班值满 100：按规则触发『猝死』--角色倒下，由同事接手或换新工位"
+        }
+      ],
       "description": "你在这栋楼里加的班。满 100 触发『猝死』——角色倒下，由同事接手（或第二天换新工位）。"
     },
     {
@@ -72,7 +99,12 @@
       "name": "KPI",
       "max": 100,
       "initial": 42,
-      "triggers": [{"at": 100, "notify": "KPI 满 100：触发『转正』结局，或先来一场老板的深夜述职会"}],
+      "triggers": [
+        {
+          "at": 100,
+          "notify": "KPI 满 100：触发『转正』结局，或先来一场老板的深夜述职会"
+        }
+      ],
       "description": "你的业绩进度。满 100 触发『转正』结局——或触发老板的深夜述职会。"
     }
   ],
@@ -110,7 +142,9 @@
   ],
   "intents": {
     "defaults": {
-      "applies_to_dice_systems": ["d20"],
+      "applies_to_dice_systems": [
+        "d20"
+      ],
       "zh_match": "substring",
       "en_match": "word",
       "case_sensitive": false,
@@ -118,55 +152,183 @@
     },
     "report": {
       "aliases": {
-        "zh-CN": ["汇报", "提交报告", "述职", "交差", "报进度", "交报告", "汇报工作"],
-        "en": ["report", "submit report", "debrief", "give status", "hand in report"]
+        "zh-CN": [
+          "汇报",
+          "提交报告",
+          "述职",
+          "交差",
+          "报进度",
+          "交报告",
+          "汇报工作"
+        ],
+        "en": [
+          "report",
+          "submit report",
+          "debrief",
+          "give status",
+          "hand in report"
+        ]
       },
-      "skill_candidates": {"zh-CN": ["汇报"], "en": ["report"]},
+      "skill_candidates": {
+        "zh-CN": [
+          "汇报"
+        ],
+        "en": [
+          "report"
+        ]
+      },
       "default_attribute": "brain",
       "priority": 10
     },
     "deflect": {
       "aliases": {
-        "zh-CN": ["甩锅", "推卸责任", "推脱", "甩锅给", "推给别人", "抵赖", "甩责任"],
-        "en": ["deflect", "blame shift", "pass the buck", "scapegoat", "push blame"]
+        "zh-CN": [
+          "甩锅",
+          "推卸责任",
+          "推脱",
+          "甩锅给",
+          "推给别人",
+          "抵赖",
+          "甩责任"
+        ],
+        "en": [
+          "deflect",
+          "blame shift",
+          "pass the buck",
+          "scapegoat",
+          "push blame"
+        ]
       },
-      "skill_candidates": {"zh-CN": ["甩锅"], "en": ["deflect_skill"]},
+      "skill_candidates": {
+        "zh-CN": [
+          "甩锅"
+        ],
+        "en": [
+          "deflect_skill"
+        ]
+      },
       "default_attribute": "deflect",
       "priority": 10
     },
     "slack": {
       "aliases": {
-        "zh-CN": ["摸鱼", "偷懒", "开小差", "划水", "摸会儿鱼", "溜号", "摸鱼时间"],
-        "en": ["slack", "procrastinate", "loaf", "dawdle", "slack off", "idle"]
+        "zh-CN": [
+          "摸鱼",
+          "偷懒",
+          "开小差",
+          "划水",
+          "摸会儿鱼",
+          "溜号",
+          "摸鱼时间"
+        ],
+        "en": [
+          "slack",
+          "procrastinate",
+          "loaf",
+          "dawdle",
+          "slack off",
+          "idle"
+        ]
       },
-      "skill_candidates": {"zh-CN": ["摸鱼"], "en": ["slack_skill"]},
+      "skill_candidates": {
+        "zh-CN": [
+          "摸鱼"
+        ],
+        "en": [
+          "slack_skill"
+        ]
+      },
       "default_attribute": "slack",
       "priority": 10
     },
     "overtime": {
       "aliases": {
-        "zh-CN": ["加班", "熬夜", "通宵", "赶工", "连夜赶", "加班干活", "留下来"],
-        "en": ["overtime", "work late", "burn the midnight oil", "stay late", "crunch"]
+        "zh-CN": [
+          "加班",
+          "熬夜",
+          "通宵",
+          "赶工",
+          "连夜赶",
+          "加班干活",
+          "留下来"
+        ],
+        "en": [
+          "overtime",
+          "work late",
+          "burn the midnight oil",
+          "stay late",
+          "crunch"
+        ]
       },
-      "skill_candidates": {"zh-CN": ["加班"], "en": ["overtime_skill"]},
+      "skill_candidates": {
+        "zh-CN": [
+          "加班"
+        ],
+        "en": [
+          "overtime_skill"
+        ]
+      },
       "default_attribute": "bp",
       "priority": 10
     },
     "suckup": {
       "aliases": {
-        "zh-CN": ["拍马屁", "讨好老板", "阿谀奉承", "献殷勤", "溜须拍马", "恭维老板", "捧老板"],
-        "en": ["suck up", "flatter", "butter up", "kiss up", "fawn", "toady"]
+        "zh-CN": [
+          "拍马屁",
+          "讨好老板",
+          "阿谀奉承",
+          "献殷勤",
+          "溜须拍马",
+          "恭维老板",
+          "捧老板"
+        ],
+        "en": [
+          "suck up",
+          "flatter",
+          "butter up",
+          "kiss up",
+          "fawn",
+          "toady"
+        ]
       },
-      "skill_candidates": {"zh-CN": ["拍马屁"], "en": ["suckup"]},
+      "skill_candidates": {
+        "zh-CN": [
+          "拍马屁"
+        ],
+        "en": [
+          "suckup"
+        ]
+      },
       "default_attribute": "social",
       "priority": 10
     },
     "meeting": {
       "aliases": {
-        "zh-CN": ["开会", "组织会议", "参加例会", "主持会议", "开个会", "会议", "例会"],
-        "en": ["meeting", "have a meeting", "attend meeting", "conference", "standup"]
+        "zh-CN": [
+          "开会",
+          "组织会议",
+          "参加例会",
+          "主持会议",
+          "开个会",
+          "会议",
+          "例会"
+        ],
+        "en": [
+          "meeting",
+          "have a meeting",
+          "attend meeting",
+          "conference",
+          "standup"
+        ]
       },
-      "skill_candidates": {"zh-CN": ["开会"], "en": ["meeting"]},
+      "skill_candidates": {
+        "zh-CN": [
+          "开会"
+        ],
+        "en": [
+          "meeting"
+        ]
+      },
       "default_attribute": "social",
       "priority": 10
     }

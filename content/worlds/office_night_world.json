@@ -1,5 +1,8 @@
 {
   "world_id": "office_night_world",
+  "world_schema_version": 2,
+  "locale_schema_version": 1,
+  "default_locale": "zh-CN",
   "world_name": "深夜写字楼",
   "description": "一栋 23:00 后开始闹鬼的写字楼。电梯会停在第 13 层，茶水间的咖啡会说话，打印机吐出的不是纸而是预言。你们是加班的打工人，今晚要么做完 KPI，要么活着下班。",
   "language": "zh-CN",
@@ -10,6 +13,7 @@
   "starter_lorebook": [
     {
       "id": "office_building_layers",
+      "visible_to": [],
       "name": "写字楼结构",
       "type": "location",
       "keywords": [
@@ -25,6 +29,7 @@
     },
     {
       "id": "office_boss",
+      "visible_to": [],
       "name": "老板·王总",
       "type": "npc",
       "keywords": [
@@ -38,6 +43,7 @@
     },
     {
       "id": "office_hr",
+      "visible_to": [],
       "name": "HR·甄姐",
       "type": "npc",
       "keywords": [
@@ -51,6 +57,7 @@
     },
     {
       "id": "office_cleaner",
+      "visible_to": [],
       "name": "保洁·兰姨",
       "type": "npc",
       "keywords": [
@@ -64,6 +71,7 @@
     },
     {
       "id": "office_security",
+      "visible_to": [],
       "name": "保安·老周",
       "type": "npc",
       "keywords": [
@@ -77,6 +85,7 @@
     },
     {
       "id": "office_coffee",
+      "visible_to": [],
       "name": "会说话的咖啡",
       "type": "item",
       "keywords": [
@@ -90,6 +99,7 @@
     },
     {
       "id": "office_13f",
+      "visible_to": [],
       "name": "第 13 层",
       "type": "location",
       "keywords": [
@@ -103,6 +113,9 @@
     },
     {
       "id": "office_kpi_rule",
+      "visible_to": [
+        "*"
+      ],
       "name": "KPI 与加班",
       "type": "other",
       "keywords": [
@@ -117,6 +130,7 @@
     },
     {
       "id": "office_printer",
+      "visible_to": [],
       "name": "会预言的打印机",
       "type": "item",
       "keywords": [
@@ -130,6 +144,7 @@
     },
     {
       "id": "office_rooftop",
+      "visible_to": [],
       "name": "天台",
       "type": "location",
       "keywords": [
