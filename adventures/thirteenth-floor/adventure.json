@@ -1,0 +1,338 @@
+{
+  "schema_version": 2,
+  "kind": "adventure",
+  "id": "thirteenth-floor",
+  "format": "diceframe:adventure-graph-v2",
+  "source_ref": "diceframe-original:office-night-13f",
+  "automation_level": "guided",
+  "name": "十三楼不下班",
+  "summary": "加班到 23:05，电梯停在了不存在的十三楼。找到档案室钥匙，查明那批二十年前的入职合同，再决定怎么下班。三章、三种结局，约一小时。",
+  "tutorial": {
+    "name": "十三楼不下班",
+    "summary": "加班到 23:05，电梯停在了不存在的十三楼。找到档案室钥匙，查明那批二十年前的入职合同，再决定怎么下班。三章、三种结局，约一小时。"
+  },
+  "estimated_minutes": 60,
+  "recommended_world_id": "office_night_world",
+  "chapters": [
+    {
+      "id": "ch1_elevator",
+      "name": "第一章 多出来的按钮"
+    },
+    {
+      "id": "ch2_floor13",
+      "name": "第二章 十三楼"
+    },
+    {
+      "id": "ch3_clockout",
+      "name": "第三章 下班"
+    }
+  ],
+  "start_node_ids": [
+    "n_elevator"
+  ],
+  "nodes": [
+    {
+      "id": "n_elevator",
+      "type": "scene",
+      "chapter_id": "ch1_elevator",
+      "name": "电梯停在十三楼",
+      "description": "23:05，你们挤进电梯准备下楼买宵夜。电梯在 12 层顿了一下，按钮面板上多出一个『13』，刚按下的『1』随之熄灭。广播里是行政部的标准女声：『今晚电梯临时维护，请各位同事走楼梯。楼梯在……13 层。』门开了，外面是一条灯光惨白的走廊。所有人的手机同时弹出一条企业微信：『【星辰项目】今晚 24:00 前提交全部材料。』",
+      "transitions": [
+        {
+          "to": "n_corridor"
+        }
+      ],
+      "on_complete": [
+        {
+          "type": "world_op",
+          "op": {
+            "op": "set_fact",
+            "key": "story.arrived_13f",
+            "value": true
+          }
+        },
+        {
+          "type": "progress_event",
+          "kind": "milestone_reached",
+          "id": "m_floor13"
+        }
+      ]
+    },
+    {
+      "id": "n_corridor",
+      "type": "scene",
+      "chapter_id": "ch2_floor13",
+      "name": "封条走廊",
+      "description": "十三楼的走廊比任何一层都长，两侧是没有门牌的工位，每台显示器都停在同一个登录界面。走廊尽头是一扇贴满封条的档案室，门上挂着老式铜锁。从这里能去三个地方：拐角的茶水间飘着咖啡香；工位区角落有台正在自己打印的打印机；消防通道往下，是保安老周的监控室。",
+      "transitions": [
+        {
+          "to": "n_coffee"
+        },
+        {
+          "to": "n_printer"
+        },
+        {
+          "to": "n_security"
+        }
+      ]
+    },
+    {
+      "id": "n_coffee",
+      "type": "scene",
+      "chapter_id": "ch2_floor13",
+      "optional": true,
+      "name": "会说话的咖啡",
+      "description": "茶水间的咖啡机自己亮了：『加班的可怜人，来一杯？』它什么八卦都知道，聊得投机还会多说一句：天台的信号塔每晚都在循环一段语音——『今晚，别加班』，那是二十年前有人留下的。它不肯说是谁，只叮嘱：『喝完这杯，别在电梯里提起它。』",
+      "on_complete": [
+        {
+          "type": "world_op",
+          "op": {
+            "op": "set_fact",
+            "key": "clue.rooftop_voice",
+            "value": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_printer",
+      "type": "scene",
+      "chapter_id": "ch2_floor13",
+      "optional": true,
+      "name": "会预言的打印机",
+      "description": "角落的打印机吐出一张明天的公司日报：『新风科技十三层档案室发现一批入职合同，签约人名单与今晚的加班名单一致，入职日期为二十年前。』打印完照例卡纸。卡住的那一张抽不出来，只露出半行字：『……本合同于签约人离职当日失效』。",
+      "on_complete": [
+        {
+          "type": "world_op",
+          "op": {
+            "op": "set_fact",
+            "key": "clue.contract_expires",
+            "value": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_security",
+      "type": "scene",
+      "chapter_id": "ch2_floor13",
+      "name": "监控室的老周",
+      "description": "老周守着一整墙监控，每一层都有人在加班——包括十三楼，画面里你们身后还多站着一个人。老周不提十三楼，只说：『电梯里的事，别在电梯里说。』档案室的铜钥匙就在他手边的抽屉里。可以好好跟他聊，也可以趁他盯着屏幕时顺走。",
+      "transitions": [
+        {
+          "to": "n_archive"
+        }
+      ],
+      "on_complete": [
+        {
+          "type": "world_op",
+          "op": {
+            "op": "set_fact",
+            "key": "item.archive_key",
+            "value": true
+          }
+        },
+        {
+          "type": "progress_event",
+          "kind": "objective_completed",
+          "id": "o_key"
+        }
+      ]
+    },
+    {
+      "id": "n_archive",
+      "type": "scene",
+      "chapter_id": "ch2_floor13",
+      "name": "档案室",
+      "description": "铜钥匙一转，封条自己脱落。档案柜按年份一直排到天花板，最上层那格的标签是二十年前。里面是一沓入职合同，每一份都写着你们的名字、你们的工号、你们的签名——入职日期却是二十年前。合同最后一条用加粗字体写着：『乙方自愿终身奋斗，不下班。』走廊另一头传来脚步声，有人在敲工位的键盘。",
+      "transitions": [
+        {
+          "to": "n_ghost"
+        },
+        {
+          "to": "n_truth"
+        }
+      ],
+      "on_complete": [
+        {
+          "type": "world_op",
+          "op": {
+            "op": "set_fact",
+            "key": "story.found_contracts",
+            "value": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "n_truth",
+      "type": "reference",
+      "chapter_id": "ch2_floor13",
+      "visibility": "gm",
+      "name": "十三楼的真相（GM）",
+      "description": "二十年前，新风科技为『星辰项目』连续通宵，十三楼整层的人在同一晚倒在工位上。前任老板把他们的劳动合同改成『终身奋斗』，让他们留在楼里继续干活：幽灵同事是其中之一，咖啡机和打印机里也住着当年的人。现任王总并不知情，他办公室深夜的打字声是前任留下的。合同在两种情况下失效：由 HR 签字同意离职，或在天亮前带出大楼烧掉。玩家若冲 KPI 去参加深夜述职会，等于在合同上续签。"
+    },
+    {
+      "id": "n_ghost",
+      "type": "scene",
+      "chapter_id": "ch3_clockout",
+      "name": "幽灵同事",
+      "description": "那个总在深夜帮你改 bug 的同事站在档案室门口。他的工牌是二十年前的样式，名字被磨掉了。他说自己当年也签过这样一份合同，『星辰项目』那一年，十三楼的人都没下班。他只知道一件事：天亮之前离不开这栋楼，明天的日报上就会多出你们的名字。",
+      "transitions": [
+        {
+          "to": "n_how_to_leave"
+        }
+      ],
+      "on_complete": [
+        {
+          "type": "progress_event",
+          "kind": "objective_completed",
+          "id": "o_contracts"
+        }
+      ]
+    },
+    {
+      "id": "n_how_to_leave",
+      "type": "decision",
+      "choice_mode": "exclusive",
+      "chapter_id": "ch3_clockout",
+      "name": "怎么下班",
+      "description": "天快亮了。你们手里攥着写有自己名字的合同，十三楼的灯一盏接一盏地灭掉。离开的办法摆在面前。",
+      "transitions": [
+        {
+          "to": "e_resigned",
+          "choice_id": "sign_off",
+          "choice_label": "找甄姐签离职单"
+        },
+        {
+          "to": "e_clockout",
+          "choice_id": "burn_on_roof",
+          "choice_label": "带合同上天台烧掉",
+          "conditions": [
+            {
+              "type": "world.fact_equals",
+              "key": "clue.rooftop_voice",
+              "value": true
+            }
+          ]
+        },
+        {
+          "to": "e_promoted",
+          "choice_id": "go_for_kpi",
+          "choice_label": "冲刺 KPI，参加深夜述职会"
+        }
+      ]
+    },
+    {
+      "id": "e_resigned",
+      "type": "ending",
+      "chapter_id": "ch3_clockout",
+      "name": "裸辞",
+      "description": "甄姐端着黑咖啡，在每一份合同上签下『同意离职』。电梯门开，按钮面板上只剩下『1』。早上九点，你们在公司楼下醒来，手机里是一条企业微信：『已为您办理离职手续，工资结算至昨日 23:59。』KPI 清零，但人还在。"
+    },
+    {
+      "id": "e_clockout",
+      "type": "ending",
+      "chapter_id": "ch3_clockout",
+      "name": "准点下班",
+      "description": "天台的风很大，信号塔还在循环那句『今晚，别加班』。合同在打火机下卷起火边，十三楼的窗户一扇扇暗下去。幽灵同事在楼下挥手，工牌上的名字重新清晰起来。电梯停在一楼，时间是 23:59。这一次，你们准点下班。"
+    },
+    {
+      "id": "e_promoted",
+      "type": "ending",
+      "chapter_id": "ch3_clockout",
+      "name": "恭喜转正",
+      "description": "述职会开得很顺利，王总说『我们是一家人』，所有人起立鼓掌。会议室的门在身后合上，再也没有打开。第二天的公司日报写着：十三楼新增正式员工若干，KPI 完成率 100%。今晚，轮到你们帮新来的加班同事改 bug 了。"
+    }
+  ],
+  "objectives": [
+    {
+      "id": "o_key",
+      "name": "拿到档案室的钥匙",
+      "node_ids": [
+        "n_security"
+      ]
+    },
+    {
+      "id": "o_contracts",
+      "name": "查明那批合同是怎么回事",
+      "node_ids": [
+        "n_archive",
+        "n_ghost"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "id": "m_floor13",
+      "name": "抵达十三楼",
+      "node_ids": [
+        "n_elevator"
+      ]
+    }
+  ],
+  "world_seed": {
+    "entities": [
+      {
+        "entity_id": "location:floor_13",
+        "kind": "location"
+      },
+      {
+        "entity_id": "location:archive_room",
+        "kind": "location"
+      },
+      {
+        "entity_id": "location:security_room",
+        "kind": "location"
+      },
+      {
+        "entity_id": "location:rooftop",
+        "kind": "location"
+      },
+      {
+        "entity_id": "object:contracts",
+        "kind": "object"
+      }
+    ],
+    "relations": [
+      {
+        "relation_id": "floor13-archive",
+        "kind": "connects",
+        "from_ref": "location:floor_13",
+        "to_ref": "location:archive_room"
+      },
+      {
+        "relation_id": "floor13-security",
+        "kind": "connects",
+        "from_ref": "location:floor_13",
+        "to_ref": "location:security_room"
+      },
+      {
+        "relation_id": "contracts-in-archive",
+        "kind": "located_at",
+        "from_ref": "object:contracts",
+        "to_ref": "location:archive_room"
+      }
+    ],
+    "facts": [
+      {
+        "key": "clue.rooftop_voice",
+        "value": false
+      },
+      {
+        "key": "clue.contract_expires",
+        "value": false
+      },
+      {
+        "key": "item.archive_key",
+        "value": false
+      },
+      {
+        "key": "gm:floor13.truth",
+        "value": "二十年前『星辰项目』整层猝死；合同由 HR 签离职或天亮前出楼烧掉即失效；冲 KPI 述职等于续签。",
+        "visibility": "gm"
+      }
+    ],
+    "processes": []
+  }
+}

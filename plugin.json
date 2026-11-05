@@ -5,15 +5,16 @@
   "default_locale": "zh-CN",
   "id": "office-night",
   "name": "深夜办公室·打工人怪谈",
-  "version": "1.2.0",
-  "min_app_version": "2.5.0",
-  "description": "喜剧向职场怪谈内容包：加班到 23:00 的写字楼开始闹鬼，电梯停在第 13 层，茶水间的咖啡会说话。规则用发际线、摸鱼力、KPI 与老板信任撑起一套加班生存战。启用后创建游戏即可选择本世界与规则。",
+  "version": "1.3.0",
+  "min_app_version": "3.0.4",
+  "description": "喜剧向职场怪谈内容包：加班到 23:00 的写字楼开始闹鬼，电梯停在第 13 层，茶水间的咖啡会说话。规则用发际线、摸鱼力、KPI 与老板信任撑起一套加班生存战。附带三章冒险「十三楼不下班」。启用后创建游戏即可选择本世界与规则，或直接从冒险开局。",
   "plugin_type": "content-pack",
   "config_schema": "config.schema.json",
   "capabilities": [
     "content.rule",
     "content.world",
-    "content.character-template"
+    "content.character-template",
+    "content.adventure"
   ],
   "permissions": [
     "plugin.config",
@@ -43,5 +44,8 @@
       "content/classes/*.json"
     ]
   },
-  "docs": "README_CN.md"
+  "docs": "README_CN.md",
+  "adventure_packages": [
+    "adventures/thirteenth-floor"
+  ]
 }
