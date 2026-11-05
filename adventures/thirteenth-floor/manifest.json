@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "adventure_id": "plugin:thirteenth-floor",
+  "version": "1.0.0",
+  "format": "diceframe:adventure-graph-v2",
+  "world_policy": "fixed",
+  "recommended_world_id": "office_night_world",
+  "required_runtime": {
+    "id": "core:adventure",
+    "minimum_version": 1
+  },
+  "default_locale": "zh-CN",
+  "supported_locales": [
+    "zh-CN"
+  ]
+}
